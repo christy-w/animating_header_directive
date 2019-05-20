@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { IonicModule } from '@ionic/angular';
 import { ShrinkingHeaderComponent } from '../components/shrinking-header/shrinking-header.component';
 
 @NgModule({
@@ -7,7 +9,9 @@ import { ShrinkingHeaderComponent } from '../components/shrinking-header/shrinki
     ShrinkingHeaderComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    IonicModule
   ],
   exports: [
     ShrinkingHeaderComponent

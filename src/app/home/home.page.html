@@ -1,15 +1,50 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
+	<!-- Back Button -->
+	<ion-back-button mode="ios" defaultHref="/home"></ion-back-button>
+	
+	<!-- Segment toolbar -->
+	<ion-toolbar mode="ios">
+		<ion-segment mode="ios" (ionChange)="segmentChanged($event)" [(ngModel)]="selectedSegment">
+			<ion-segment-button mode="ios" checked value="about">
+				<div class="segment-name">About</div>
+				<div class="divider" [ngClass]="{'selected': selectedSegment === 'about'}"></div>
+			</ion-segment-button>
+			<ion-segment-button mode="ios" value="top5spots">
+				<div class="segment-name">Top 5</div>
+				<div class="divider" [ngClass]="{'selected': selectedSegment === 'top5spots'}"></div>
+			</ion-segment-button>
+			<ion-segment-button mode="ios" value="partners">
+				<div class="segment-name">Partners</div>
+				<div class="divider" [ngClass]="{'selected': selectedSegment === 'partners'}"></div>
+			</ion-segment-button>
+		</ion-segment>
+	</ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
-  <app-shrinking-header></app-shrinking-header>
+<ion-content fullscreen #scrollContent>
+  	<div [ngSwitch]="selectedSegment">
+		<!-- About Tab -->
+		<div *ngSwitchCase="'about'" class="content-wrapper about-content">
+			The world is your oyster.
+			<p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+		</div>
+
+		<!-- Top 5 Spots Tab -->
+		<div *ngSwitchCase="'top5spots'" class="content-wrapper spots-content">
+			<!-- Spots card list-->
+			<ion-card>Top5 spots</ion-card>
+		</div>
+	
+		<!-- Partners Tab -->
+		<div *ngSwitchCase="'partners'" class="content-wrapper partners-content">
+			Partners
+		</div>
+	</div>
+
+	<!-- FAB -->
+	<!-- <ion-fab class="start-tour-fab" #startTourFab (click)="openTourMapPage()">
+		<button ion-fab>
+			<div class="label">Start Tour</div>
+		</button>
+	</ion-fab> -->
 </ion-content>
