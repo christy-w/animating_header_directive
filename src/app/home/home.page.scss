@@ -54,6 +54,58 @@ ion-toolbar {
     }
 }
 
+.shrinking-header {
+    color: #fff;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    z-index: -1;
+    overflow: hidden;
+    background-color: #fff;
+
+    .bg-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 1;
+    }
+    .nav-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-position: unset;
+        background-repeat: repeat;
+        background-size: 587px 801px;
+        opacity: 0;
+    }
+    .bg-layer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #000;
+        opacity: 0.2;
+    }
+    .nav-layer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        opacity: 0;
+        background-color: #6D750E;
+    }
+}
+
 .about-content {
     padding: 20px;
     font-size: 13px;

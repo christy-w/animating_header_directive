@@ -3,16 +3,15 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { ComponentsModule } from '../components/components.module';
 
 import { HomePage } from './home.page';
+import { ShrinkingHeaderDirective } from '../directives/shrinking-header.directive';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ComponentsModule,
     RouterModule.forChild([
       {
         path: '',
@@ -20,6 +19,6 @@ import { HomePage } from './home.page';
       }
     ])
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, ShrinkingHeaderDirective]
 })
 export class HomePageModule {}

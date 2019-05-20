@@ -2,6 +2,14 @@
 	<!-- Back Button -->
 	<ion-back-button mode="ios" defaultHref="/home"></ion-back-button>
 	
+	<!-- Shrinking Header -->
+	<div class="shrinking-header" [shrinkingHeader]="scrollContent">
+		<div class="bg-img" [ngStyle]="{'background-image': 'url(\'assets/img/img_bg.jpg\')'}"></div>
+		<div class="bg-layer"></div>
+		<div class="nav-layer"></div>
+		<div class="nav-img" [ngStyle]="{'background-image': 'url(\'assets/img/header_pattern.png\')'}"></div>
+	</div>
+
 	<!-- Segment toolbar -->
 	<ion-toolbar mode="ios">
 		<ion-segment mode="ios" (ionChange)="segmentChanged($event)" [(ngModel)]="selectedSegment">
@@ -21,12 +29,76 @@
 	</ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen #scrollContent>
+<ion-content fullscreen #scrollContent scrollEvents="true">
   	<div [ngSwitch]="selectedSegment">
 		<!-- About Tab -->
 		<div *ngSwitchCase="'about'" class="content-wrapper about-content">
 			The world is your oyster.
 			<p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+
+			The world is your oyster.
+			<p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+
+			The world is your oyster.
+			<p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+
+			The world is your oyster.
+			<p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+
+			The world is your oyster.
+			<p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+
+			The world is your oyster.
+			<p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+
+			The world is your oyster.
+			<p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+
+			The world is your oyster.
+			<p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+
+			The world is your oyster.
+			<p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+
+			The world is your oyster.
+			<p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+
+			The world is your oyster.
+			<p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+
+			The world is your oyster.
+			<p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+
+			The world is your oyster.
+			<p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+
+			The world is your oyster.
+			<p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+
+			The world is your oyster.
+			<p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+
+			The world is your oyster.
+			<p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+
+			The world is your oyster.
+			<p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+
+			The world is your oyster.
+			<p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+
+			The world is your oyster.
+			<p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+
+			The world is your oyster.
+			<p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+
+			The world is your oyster.
+			<p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+
+			The world is your oyster.
+			<p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+
 		</div>
 
 		<!-- Top 5 Spots Tab -->
